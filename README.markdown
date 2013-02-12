@@ -3,7 +3,10 @@ Node DDP Client
 
 A callback style DDP (meteor's distributed data protocol) node client.
 
-Based _heavily_ on alansikora's [node-js_ddp-client](https://github.com/alansikora/node-js_ddp-client), and meteor's python client. Uses a more callback style approach.
+ * Added support for `onClose` and `onError` so that it is easy to reconnect when the connection is closed for some reason.
+ * `onMessage()` message filter based on eventedmind work (https://github.com/EventedMind/node-ddp-client/)
+ * Based on Tom Coleman (https://github.com/oortcloud/node-ddp-client)
+ * Based _heavily_ on alansikora's [node-js_ddp-client](https://github.com/alansikora/node-js_ddp-client), and meteor's python client. Uses a more callback style approach.
 
 Unfinished at this point, but should do most of what you want it to do.
 

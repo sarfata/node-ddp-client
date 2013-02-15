@@ -39,10 +39,24 @@ ddpclient.connect(function() {
     console.log('posts complete:');
     console.log(ddpclient.collections.posts);
   })
-});
+},
+function(error) {
+	console.log("Error: %s", error);
+	setTimeout(function() { connect(); }, 1000);
+},
+function(code, msg) {
+	console.log("Close: [%s] %s", code, msg);
+	connect();
+}
+);
 ```
 
 Thanks
 ======
 
-Many thanks to Alan Sikora, and also Mike Bannister(@possibilities).
+Many thanks to Alan Sikora, and also Mike Bannister(@possibilities) for the initial work on a node ddp client.
+
+Contributions:
+ * Chris Mather (@eventedmind)
+ * Thomas Sarlandie (@sarfata)
+ 
